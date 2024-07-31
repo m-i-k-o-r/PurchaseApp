@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create-tables-0
+      author: Mihail Korolitskiy
+      changes:
+        - sqlFile:
+            path: tables/create-table-purchase.sql
+            relativeToChangelogFile: true
