@@ -1,0 +1,223 @@
+button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    gap: 0.5rem;
+
+    margin: 5px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+
+    background: none;
+    color: black;
+    border: 2px solid;
+    border-radius: 0.7rem;
+
+    position: relative;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+button:-moz-focusring {
+    outline: auto;
+}
+
+button svg {
+    display: block;
+    vertical-align: middle;
+}
+
+button [hidden] {
+    display: none;
+}
+
+button:before {
+    border-radius: 0.6rem;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: translate(5px, 5px);
+    transition: transform 0.2s;
+    z-index: -1;
+}
+
+button:hover:before {
+    transform: translate(0);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.form-input, .form-select, .form-radio {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    gap: 0.5rem;
+    position: relative;
+    width: 300px;
+    height: 3rem;
+    margin: 10px;
+    padding: 5px;
+}
+
+.form-input input, .form-select select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    border-radius: 0.7rem;
+    padding: 0 1.25rem;
+    background: none;
+}
+
+.form-select select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-input label, .form-select label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.3rem;
+    cursor: text;
+    background-color: white;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    pointer-events: none;
+}
+
+.form-input input:focus + label,
+.form-input input:not(:placeholder-shown):not(:focus) + label,
+.form-select select:focus + label,
+.form-select select:not(:focus):not(:empty) + label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+}
+
+.form-radio {
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+
+.radio-option {
+    display: flex;
+}
+
+.radio-option label {
+    padding-left: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button-save::before, .button-create::before {
+    background: #4fcc3d;
+}
+
+.button-reset::before, .button-update::before {
+    background: #f4c430;
+}
+
+.button-delete::before {
+    background: #cc3d4f;
+}
+
+.button-card {
+    display: block;
+    width: 20rem;
+    text-align: left;
+    padding: 10px;
+    margin-block: 7px;
+}
+
+.button-card::before {
+    background: #fadadd;
+}
+
+.button-card {
+    p {
+        font-weight: 500;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.list-info {
+    margin: 5px;
+    padding: 5px;
+
+    p {
+        word-wrap: break-word;
+        word-break: break-word;
+        font-weight: 500;
+        font-size: 1rem;
+        gap: 0.5rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.list-container {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.divider {
+    height: 1px;
+    background-color: black;
+    width: 500px;
+    margin-block: 20px;
+}
+
+h1, h2, p {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
